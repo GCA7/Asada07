@@ -1,0 +1,70 @@
+C:\Users\Michael\Desktop\Asada2015\Asada2015\obj\Debug\Asada2015.GUI.BuscarAbonado.resources
+C:\Users\Michael\Desktop\Asada2015\Asada2015\obj\Debug\Asada2015.Login.resources
+C:\Users\Michael\Desktop\Asada2015\Asada2015\obj\Debug\Asada2015.GUI.MantAbonados.resources
+C:\Users\Michael\Desktop\Asada2015\Asada2015\obj\Debug\Asada2015.GUI.Previstas.resources
+C:\Users\Michael\Desktop\Asada2015\Asada2015\obj\Debug\Asada2015.GUI.Principal.resources
+C:\Users\Michael\Desktop\Asada2015\Asada2015\obj\Debug\Asada.Properties.Resources.resources
+C:\Users\Michael\Desktop\Asada2015\Asada2015\obj\Debug\Asada.csproj.GenerateResource.Cache
+C:\Users\Michael\Desktop\Asada2015\Asada2015\obj\Debug\RdlCompile.cache
+C:\Users\Michael\Desktop\Asada2015\Asada2015\obj\Debug\RdlCompile.compiled
+C:\Users\Michael\Desktop\Asada2015\Asada2015\bin\Debug\Asada.exe.config
+C:\Users\Michael\Desktop\Asada2015\Asada2015\bin\Debug\Asada.exe
+C:\Users\Michael\Desktop\Asada2015\Asada2015\bin\Debug\Asada.pdb
+C:\Users\Michael\Desktop\Asada2015\Asada2015\bin\Debug\Npgsql.dll
+C:\Users\Michael\Desktop\Asada2015\Asada2015\bin\Debug\Npgsql.xml
+C:\Users\Michael\Desktop\Asada2015\Asada2015\obj\Debug\Asada.exe
+C:\Users\Michael\Desktop\Asada2015\Asada2015\obj\Debug\Asada.pdb
+C:\Users\Michael\Desktop\Asada\Asada\bin\Debug\Asada.exe.config
+C:\Users\Michael\Desktop\Asada\Asada\bin\Debug\Asada.exe
+C:\Users\Michael\Desktop\Asada\Asada\bin\Debug\Asada.pdb
+C:\Users\Michael\Desktop\Asada\Asada\bin\Debug\Npgsql.dll
+C:\Users\Michael\Desktop\Asada\Asada\bin\Debug\Npgsql.xml
+C:\Users\Michael\Desktop\Asada\Asada\obj\Debug\Asada2015.Login.resources
+C:\Users\Michael\Desktop\Asada\Asada\obj\Debug\Asada2015.GUI.Principal.resources
+C:\Users\Michael\Desktop\Asada\Asada\obj\Debug\Asada.Properties.Resources.resources
+C:\Users\Michael\Desktop\Asada\Asada\obj\Debug\Asada.csproj.GenerateResource.Cache
+C:\Users\Michael\Desktop\Asada\Asada\obj\Debug\RdlCompile.cache
+C:\Users\Michael\Desktop\Asada\Asada\obj\Debug\RdlCompile.compiled
+C:\Users\Michael\Desktop\Asada\Asada\obj\Debug\Asada.exe
+C:\Users\Michael\Desktop\Asada\Asada\obj\Debug\Asada.pdb
+C:\Users\Michael\Desktop\Asada\Asada\obj\Debug\Asada2015.GUI.SerchAbonado.resources
+C:\Users\Michael\Desktop\Asada\Asada\obj\Debug\Asada2015.GUI.frmAbonados.resources
+C:\Users\Michael\Desktop\Asada\Asada\obj\Debug\Asada2015.GUI.frmPrevistas.resources
+C:\Users\Michael\Desktop\Asada\Asada\obj\Debug\Asada.GUI.SerchPrevista.resources
+C:\Users\Michael\Desktop\Asada\Asada\obj\Debug\Asada.csprojResolveAssemblyReference.cache
+C:\Users\Luis B\Desktop\ProyectoASADA\Asada\Asada\bin\Debug\Asada.exe.config
+C:\Users\Luis B\Desktop\ProyectoASADA\Asada\Asada\bin\Debug\Asada.exe
+C:\Users\Luis B\Desktop\ProyectoASADA\Asada\Asada\bin\Debug\Asada.pdb
+C:\Users\Luis B\Desktop\ProyectoASADA\Asada\Asada\bin\Debug\MySql.Data.dll
+C:\Users\Luis B\Desktop\ProyectoASADA\Asada\Asada\bin\Debug\Npgsql.dll
+C:\Users\Luis B\Desktop\ProyectoASADA\Asada\Asada\bin\Debug\Npgsql.xml
+C:\Users\Luis B\Desktop\ProyectoASADA\Asada\Asada\obj\Debug\Asada.csprojResolveAssemblyReference.cache
+C:\Users\Luis B\Desktop\ProyectoASADA\Asada\Asada\obj\Debug\Asada2015.GUI.SerchAbonado.resources
+C:\Users\Luis B\Desktop\ProyectoASADA\Asada\Asada\obj\Debug\Asada2015.Login.resources
+C:\Users\Luis B\Desktop\ProyectoASADA\Asada\Asada\obj\Debug\Asada2015.GUI.frmAbonados.resources
+C:\Users\Luis B\Desktop\ProyectoASADA\Asada\Asada\obj\Debug\Asada2015.GUI.frmPrevistas.resources
+C:\Users\Luis B\Desktop\ProyectoASADA\Asada\Asada\obj\Debug\Asada2015.GUI.Principal.resources
+C:\Users\Luis B\Desktop\ProyectoASADA\Asada\Asada\obj\Debug\Asada.GUI.SerchPrevista.resources
+C:\Users\Luis B\Desktop\ProyectoASADA\Asada\Asada\obj\Debug\Asada.Properties.Resources.resources
+C:\Users\Luis B\Desktop\ProyectoASADA\Asada\Asada\obj\Debug\Asada.csproj.GenerateResource.Cache
+C:\Users\Luis B\Desktop\ProyectoASADA\Asada\Asada\obj\Debug\RdlCompile.cache
+C:\Users\Luis B\Desktop\ProyectoASADA\Asada\Asada\obj\Debug\RdlCompile.compiled
+C:\Users\Luis B\Desktop\ProyectoASADA\Asada\Asada\obj\Debug\Asada.exe
+C:\Users\Luis B\Desktop\ProyectoASADA\Asada\Asada\obj\Debug\Asada.pdb
+C:\Users\Luis\Desktop\ProyectoASADA\Asada\Asada\bin\Debug\Asada.exe.config
+C:\Users\Luis\Desktop\ProyectoASADA\Asada\Asada\obj\Debug\Asada.exe
+C:\Users\Luis\Desktop\ProyectoASADA\Asada\Asada\obj\Debug\Asada.pdb
+C:\Users\Luis\Desktop\ProyectoASADA\Asada\Asada\bin\Debug\Asada.exe
+C:\Users\Luis\Desktop\ProyectoASADA\Asada\Asada\bin\Debug\Asada.pdb
+C:\Users\Luis\Desktop\ProyectoASADA\Asada\Asada\bin\Debug\MySql.Data.dll
+C:\Users\Luis\Desktop\ProyectoASADA\Asada\Asada\bin\Debug\Npgsql.dll
+C:\Users\Luis\Desktop\ProyectoASADA\Asada\Asada\bin\Debug\Npgsql.xml
+C:\Users\Luis\Desktop\ProyectoASADA\Asada\Asada\obj\Debug\Asada.csprojResolveAssemblyReference.cache
+C:\Users\Luis\Desktop\ProyectoASADA\Asada\Asada\obj\Debug\Asada2015.GUI.SerchAbonado.resources
+C:\Users\Luis\Desktop\ProyectoASADA\Asada\Asada\obj\Debug\Asada2015.Login.resources
+C:\Users\Luis\Desktop\ProyectoASADA\Asada\Asada\obj\Debug\Asada2015.GUI.frmAbonados.resources
+C:\Users\Luis\Desktop\ProyectoASADA\Asada\Asada\obj\Debug\Asada2015.GUI.frmPrevistas.resources
+C:\Users\Luis\Desktop\ProyectoASADA\Asada\Asada\obj\Debug\Asada2015.GUI.Principal.resources
+C:\Users\Luis\Desktop\ProyectoASADA\Asada\Asada\obj\Debug\Asada.GUI.SerchPrevista.resources
+C:\Users\Luis\Desktop\ProyectoASADA\Asada\Asada\obj\Debug\Asada.Properties.Resources.resources
+C:\Users\Luis\Desktop\ProyectoASADA\Asada\Asada\obj\Debug\Asada.csproj.GenerateResource.Cache

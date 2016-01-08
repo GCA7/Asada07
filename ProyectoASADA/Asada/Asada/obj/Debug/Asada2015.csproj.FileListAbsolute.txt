@@ -1,0 +1,17 @@
+C:\Users\Michael\Desktop\Asada2015\Asada2015\bin\Debug\Asada2015.exe.config
+C:\Users\Michael\Desktop\Asada2015\Asada2015\bin\Debug\Asada2015.exe
+C:\Users\Michael\Desktop\Asada2015\Asada2015\bin\Debug\Asada2015.pdb
+C:\Users\Michael\Desktop\Asada2015\Asada2015\obj\Debug\Asada2015.csprojResolveAssemblyReference.cache
+C:\Users\Michael\Desktop\Asada2015\Asada2015\obj\Debug\Asada2015.Login.resources
+C:\Users\Michael\Desktop\Asada2015\Asada2015\obj\Debug\Asada2015.Properties.Resources.resources
+C:\Users\Michael\Desktop\Asada2015\Asada2015\obj\Debug\Asada2015.csproj.GenerateResource.Cache
+C:\Users\Michael\Desktop\Asada2015\Asada2015\obj\Debug\Asada2015.exe
+C:\Users\Michael\Desktop\Asada2015\Asada2015\obj\Debug\Asada2015.pdb
+C:\Users\Michael\Desktop\Asada2015\Asada2015\bin\Debug\Npgsql.dll
+C:\Users\Michael\Desktop\Asada2015\Asada2015\bin\Debug\Npgsql.xml
+C:\Users\Michael\Desktop\Asada2015\Asada2015\obj\Debug\Asada2015.GUI.Principal.resources
+C:\Users\Michael\Desktop\Asada2015\Asada2015\obj\Debug\RdlCompile.cache
+C:\Users\Michael\Desktop\Asada2015\Asada2015\obj\Debug\RdlCompile.compiled
+C:\Users\Michael\Desktop\Asada2015\Asada2015\obj\Debug\Asada2015.GUI.MantAbonados.resources
+C:\Users\Michael\Desktop\Asada2015\Asada2015\obj\Debug\Asada2015.GUI.BuscarAbonado.resources
+C:\Users\Michael\Desktop\Asada2015\Asada2015\obj\Debug\Asada2015.GUI.Previstas.resources
