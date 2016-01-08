@@ -80,6 +80,7 @@
     <Compile Include="DAO\Connection.cs" />
     <Compile Include="DAO\Encriptar.cs" />
     <Compile Include="DAO\AbonadoDAO.cs" />
+    <Compile Include="DAO\Logs.cs" />
     <Compile Include="DAO\PrevistaDAO.cs" />
     <Compile Include="DAO\SectorDAO.cs" />
     <Compile Include="DAO\TarifaDAO.cs" />
@@ -210,6 +211,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Notifications\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
