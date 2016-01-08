@@ -18,6 +18,7 @@ namespace Asada2015.DAO
     {
         private string sql = "";
         private int result;
+        private int p = 0;
         private Abonado abo;
         private Usuario user;
         private Connection clsCon;
