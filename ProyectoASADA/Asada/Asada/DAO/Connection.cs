@@ -1,4 +1,5 @@
-﻿using Asada2015.Entidades;
+﻿using Asada.DAO;
+using Asada2015.Entidades;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace Asada2015.DAO
 {
     public class Connection
     {
-        private string stringConn = "", sql = "";
+        private string stringConn = "";
         private Usuario user;
 
         public Connection()
@@ -38,8 +39,11 @@ namespace Asada2015.DAO
                     return true;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Logs lg = new Logs();
+                lg.Log(DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ", " + e.Message.ToString());
+
                 return false;
                 throw;
             }

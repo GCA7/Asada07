@@ -22,12 +22,83 @@ namespace Asada2015.GUI
         private DataTable dt;
         private DataSet dts, dts1;
         private string columnName = "", filterValue = "", rowFilter = "", filtertext = "";
+        private int rows = 0, columns = 0;
         public SerchAbonado(Usuario us)
         {
             InitializeComponent();
             this.usu = us;
         }
 
+        /// <summary>
+        /// este evento se ejecuta al escribir en el textbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            dts1 = dts.Copy();
+            if (textBox1.Text.Trim() != string.Empty)
+            {
+
+                if (RbIdentification.Checked)
+                {
+                    columnName = "Cédula";
+                    filtertext = filtraced();
+                    //filtertext = maskedTextBox1.Text;                    
+                }
+                else
+                {
+                    if (RbName.Checked)
+                    {
+                        columnName = "Nombre";
+                        filtertext = textBox1.Text;
+                    }
+                    else
+                    {
+                        columnName = "Apellidos";
+                        filtertext = textBox1.Text;
+                    }
+                }
+                // forma generica admite cambio de columnas
+                rowFilter = columnName + (filterValue = " like '%" + filtertext + "%'");
+                dts1.Tables[0].DefaultView.RowFilter = rowFilter;
+                dataGridView1.DataSource = dts1.Tables[0].DefaultView;
+                RowsBackColor(dataGridView1);
+            }
+            else
+            {
+                dataGridView1.DataSource = dts.Tables[0];
+                RowsBackColor(dataGridView1);
+            }
+            filtertext = "";
+        }
+
+        /// <summary>
+        /// da color a fila de por medio en el dataGridView1
+        /// </summary>
+        /// <param name="dataGridView1"></param>
+        private void RowsBackColor(DataGridView dataGridView1)
+        {
+            System.Drawing.Color c = Color.LightSkyBlue;
+            rows = dataGridView1.RowCount;
+            columns = dataGridView1.ColumnCount;
+
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    if (i % 2 == 0)
+                    {
+                        dataGridView1.Rows[i].Cells[j].Style.BackColor = c;
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// ayuda a filtrar la cedula sin que el usuario agregue los guiones
+        /// </summary>
+        /// <returns></returns>
         private string filtraced()
         {
             int cont = 0;
@@ -44,64 +115,22 @@ namespace Asada2015.GUI
                 {
                     num += textBox1.Text[i].ToString();
                 }
+
             }
             return num;
-        }
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            // este evento ejecutado en tiempo de escritura
-            dts1 = dts.Copy();            
-            if(textBox1.Text.Trim() != string.Empty)
-            {
-
-            if (RbIdentification.Checked)
-            {
-                columnName = "Cédula";
-                 filtertext = filtraced();
-            }
-            else
-            {
-                if (RbName.Checked)
-                {
-                    columnName = "Nombre";
-                    filtertext = textBox1.Text;
-
-                }
-                else
-                {
-                    columnName = "Apellidos";
-                    filtertext = textBox1.Text;
-                }
-            }
-            // forma generica admite cambio de columnas
-            rowFilter = columnName + (filterValue = " like '%" + filtertext + "%'");
-            dts1.Tables[0].DefaultView.RowFilter = rowFilter;
-            dataGridView1.DataSource = dts1.Tables[0].DefaultView;
-            
-
-          }
-            else
-            {
-                dataGridView1.DataSource = dts.Tables[0];
-            }
         }
 
         private Abonado GetInfo()
         {
-            //abo.Identification = dataGridView1.CurrentRow.Cells[0].Value.ToString();  
-            //abo.Name = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            //abo.Firstname = dataGridView1.CurrentRow.Cells[2].Value.ToString();      
-            //abo.Lastname = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            //abo.Movil = dataGridView1.CurrentRow.Cells[4].Value.ToString();         
-            //abo.Phonenum = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            //abo.Email = dataGridView1.CurrentRow.Cells[6].Value.ToString();        
-            //abo.Dateregister = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-            //abo.Address = dataGridView1.CurrentRow.Cells[8].Value.ToString(); 
-            //forma anterior de buscar, no permitia filtrar columna por ambos apellidos
-
             abo = aboDao.SerchOneAbonado(dataGridView1.CurrentRow.Cells[0].Value.ToString());
             return abo;
         }
+
+        /// <summary>
+        /// load del formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SerchAbonado_Load(object sender, EventArgs e)
         {
             aboDao = new AbonadoDAO(usu);
@@ -113,14 +142,20 @@ namespace Asada2015.GUI
             dts.Tables.Add(dt);
             // Se asigna el DataTable como origen de datos del DataGridView
             dataGridView1.DataSource = dts.Tables[0];
+            RowsBackColor(dataGridView1);
         }
 
+        /// <summary>
+        /// evento doble clic sobre el dataGridView1
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             abo = GetInfo();
             this.Hide();
             frmAbo = (frmAbonados)this.Owner;
-            frmAbo.Abo_Load(abo,usu);
+            frmAbo.Abo_Load(abo, usu);
             frmAbo.Show();
         }
 
@@ -143,7 +178,7 @@ namespace Asada2015.GUI
             this.Hide();
             this.OutAction();
         }
-        
+
         private void OutAction()
         {
             abo = new Abonado();

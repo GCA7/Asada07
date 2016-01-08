@@ -9,13 +9,14 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using Asada.DAO;
 
 namespace Asada2015.DAO
 {
 
     public class AbonadoDAO
     {
-        private string sql="";
+        private string sql = "";
         private int result;
         private Abonado abo;
         private Usuario user;
@@ -42,13 +43,16 @@ namespace Asada2015.DAO
                     abo = new Abonado();
                     cn.Open();
                     sql = "select * from asada.view_abonados";
-                    cmd = new MySqlCommand(sql, cn);                    
-                    MySqlDataAdapter dt = new MySqlDataAdapter(sql, cn);                    
+                    cmd = new MySqlCommand(sql, cn);
+                    MySqlDataAdapter dt = new MySqlDataAdapter(sql, cn);
                     return dt;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Logs lg = new Logs();
+                lg.Log(DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ", " + e.Message.ToString());
+
                 throw;
             }
         }
@@ -74,7 +78,7 @@ namespace Asada2015.DAO
                         cmd.Parameters.Add(new MySqlParameter("@Phonenum", abo.Phonenum));
                         cmd.Parameters.Add(new MySqlParameter("@Email", abo.Email));
                         cmd.Parameters.Add(new MySqlParameter("@Dateregister", abo.Dateregister));
-                        cmd.Parameters.Add(new MySqlParameter("@Address", abo.Address));
+                        cmd.Parameters.Add(new MySqlParameter("@Addres", abo.Address));
                         result = cmd.ExecuteNonQuery();
                         return result > 0;
                     }
@@ -84,8 +88,11 @@ namespace Asada2015.DAO
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Logs lg = new Logs();
+                lg.Log(DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ", " + e.Message.ToString());
+
                 return false;
                 throw;
             }
@@ -110,32 +117,21 @@ namespace Asada2015.DAO
                     cmd.Parameters.Add(new MySqlParameter("@Address", abo.Address));
                     cmd.Parameters.Add(new MySqlParameter("@Identification", abo.Identification));
                     result = cmd.ExecuteNonQuery();
-                    return result > 0;    
-                }                
-            }
-            catch (Exception)
-            {
-                return false;
-                throw;
-            }
-        }
 
-        public bool Delete(Abonado abo)
-        {
-            try
-            {
-                using (MySqlConnection cn = new MySqlConnection((clsCon = new Connection(this.user)).Parameters()))
-                {
-                    cn.Open();
-                    sql = "delete from asada.abonados where ID_ABONADO=@Identification";
-                    cmd = new MySqlCommand(sql, cn);
-                    cmd.Parameters.Add(new MySqlParameter("@Identifcation", abo.Identification));
-                    result = cmd.ExecuteNonQuery();
-                    return result > 0;
+                    if (result > 0) // ¿ verificar estas líneas?
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Logs lg = new Logs();
+                lg.Log(DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ", " + e.Message.ToString());
                 return false;
                 throw;
             }
@@ -155,8 +151,10 @@ namespace Asada2015.DAO
                     return result > 0;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Logs lg = new Logs();
+                lg.Log(DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ", " + e.Message.ToString());
                 return false;
                 throw;
             }
@@ -184,8 +182,10 @@ namespace Asada2015.DAO
                     return listAbo;
                 }
             }
-            catch (Exception)
-            {                
+            catch (Exception e)
+            {
+                Logs lg = new Logs();
+                lg.Log(DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ", " + e.Message.ToString());
                 throw;
             }
         }
@@ -218,8 +218,10 @@ namespace Asada2015.DAO
                     return abo;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Asada.DAO.Logs lg = new Asada.DAO.Logs();
+                lg.Log(DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ", " + e.Message.ToString());
                 throw;
             }
         }

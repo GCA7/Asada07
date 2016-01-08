@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 
 namespace Asada.DAO
 {
-
     public class TarifaDAO
     {
         private string sql = "";
@@ -54,11 +53,13 @@ namespace Asada.DAO
                     return lisTrf;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Logs lg = new Logs();
+                lg.Log(DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ", " + e.Message.ToString());
                 throw;
             }
 
-        }        
+        }
     }
 }
