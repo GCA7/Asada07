@@ -47,6 +47,7 @@
             this.groupBox1.Controls.Add(this.RbName);
             this.groupBox1.Controls.Add(this.RbIdentification);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(12, 10);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(263, 50);
@@ -58,6 +59,7 @@
             // 
             this.RbParentsName.AutoSize = true;
             this.RbParentsName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbParentsName.ForeColor = System.Drawing.Color.White;
             this.RbParentsName.Location = new System.Drawing.Point(176, 18);
             this.RbParentsName.Name = "RbParentsName";
             this.RbParentsName.Size = new System.Drawing.Size(83, 20);
@@ -70,6 +72,7 @@
             // 
             this.RbName.AutoSize = true;
             this.RbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbName.ForeColor = System.Drawing.Color.White;
             this.RbName.Location = new System.Drawing.Point(95, 18);
             this.RbName.Name = "RbName";
             this.RbName.Size = new System.Drawing.Size(75, 20);
@@ -82,6 +85,7 @@
             // 
             this.RbIdentification.AutoSize = true;
             this.RbIdentification.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbIdentification.ForeColor = System.Drawing.Color.White;
             this.RbIdentification.Location = new System.Drawing.Point(20, 19);
             this.RbIdentification.Name = "RbIdentification";
             this.RbIdentification.Size = new System.Drawing.Size(69, 20);
@@ -93,10 +97,11 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkSlateGray;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 65);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(871, 327);
+            this.dataGridView1.Size = new System.Drawing.Size(884, 327);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
@@ -104,6 +109,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(306, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 16);
@@ -122,8 +128,10 @@
             // 
             // BtnExit
             // 
+            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnExit.Image = global::Asada.Properties.Resources.salir;
+            this.BtnExit.ForeColor = System.Drawing.Color.Transparent;
+            this.BtnExit.Image = global::Asada.Properties.Resources.cancel1;
             this.BtnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnExit.Location = new System.Drawing.Point(779, 18);
             this.BtnExit.Name = "BtnExit";
@@ -136,8 +144,10 @@
             // 
             // BtnAccept
             // 
+            this.BtnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAccept.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAccept.Image = global::Asada.Properties.Resources.ok;
+            this.BtnAccept.ForeColor = System.Drawing.Color.Transparent;
+            this.BtnAccept.Image = global::Asada.Properties.Resources.checked211;
             this.BtnAccept.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnAccept.Location = new System.Drawing.Point(680, 18);
             this.BtnAccept.Name = "BtnAccept";
@@ -152,7 +162,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(895, 405);
             this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.BtnAccept);
@@ -160,6 +170,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "SerchAbonado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Logitech GML -  Buscador Abonado ";

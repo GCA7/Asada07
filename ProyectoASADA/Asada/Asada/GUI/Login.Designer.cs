@@ -33,8 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.LblError = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.BtnCancel = new System.Windows.Forms.Button();
             this.BtnAccept = new System.Windows.Forms.Button();
+            this.BtnCancel = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,10 +54,10 @@
             // LblUsuario
             // 
             this.LblUsuario.AutoSize = true;
-            this.LblUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.LblUsuario.BackColor = System.Drawing.Color.Transparent;
             this.LblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LblUsuario.Location = new System.Drawing.Point(95, 153);
+            this.LblUsuario.ForeColor = System.Drawing.Color.Transparent;
+            this.LblUsuario.Location = new System.Drawing.Point(89, 154);
             this.LblUsuario.Name = "LblUsuario";
             this.LblUsuario.Size = new System.Drawing.Size(60, 18);
             this.LblUsuario.TabIndex = 2;
@@ -66,10 +66,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(84, 217);
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(77, 218);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 18);
             this.label1.TabIndex = 3;
@@ -79,7 +79,7 @@
             // 
             this.LblError.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.LblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblError.Location = new System.Drawing.Point(0, 356);
+            this.LblError.Location = new System.Drawing.Point(0, 469);
             this.LblError.Name = "LblError";
             this.LblError.Size = new System.Drawing.Size(258, 13);
             this.LblError.TabIndex = 5;
@@ -95,28 +95,14 @@
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContrasena_KeyDown);
             // 
-            // BtnCancel
-            // 
-            this.BtnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCancel.ForeColor = System.Drawing.Color.Black;
-            this.BtnCancel.Image = global::Asada.Properties.Resources.cancel;
-            this.BtnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCancel.Location = new System.Drawing.Point(134, 303);
-            this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(110, 40);
-            this.BtnCancel.TabIndex = 6;
-            this.BtnCancel.Text = "Cancelar";
-            this.BtnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnCancel.UseVisualStyleBackColor = true;
-            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
-            // 
             // BtnAccept
             // 
+            this.BtnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAccept.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAccept.ForeColor = System.Drawing.Color.Black;
-            this.BtnAccept.Image = global::Asada.Properties.Resources.ok;
+            this.BtnAccept.ForeColor = System.Drawing.Color.Transparent;
+            this.BtnAccept.Image = global::Asada.Properties.Resources.checked211;
             this.BtnAccept.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.BtnAccept.Location = new System.Drawing.Point(28, 303);
+            this.BtnAccept.Location = new System.Drawing.Point(23, 426);
             this.BtnAccept.Name = "BtnAccept";
             this.BtnAccept.Size = new System.Drawing.Size(100, 40);
             this.BtnAccept.TabIndex = 2;
@@ -125,11 +111,29 @@
             this.BtnAccept.UseVisualStyleBackColor = true;
             this.BtnAccept.Click += new System.EventHandler(this.BtnAceptar_Click);
             // 
+            // BtnCancel
+            // 
+            this.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancel.ForeColor = System.Drawing.Color.Transparent;
+            this.BtnCancel.Image = global::Asada.Properties.Resources.cancel1;
+            this.BtnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCancel.Location = new System.Drawing.Point(129, 426);
+            this.BtnCancel.Name = "BtnCancel";
+            this.BtnCancel.Size = new System.Drawing.Size(110, 40);
+            this.BtnCancel.TabIndex = 6;
+            this.BtnCancel.Text = "Cancelar";
+            this.BtnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnCancel.UseVisualStyleBackColor = true;
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Image = global::Asada.Properties.Resources.profile;
+            this.pictureBox1.Location = new System.Drawing.Point(60, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(232, 202);
+            this.pictureBox1.Size = new System.Drawing.Size(137, 139);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
@@ -137,8 +141,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(258, 369);
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.ClientSize = new System.Drawing.Size(258, 482);
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.LblError);
@@ -147,6 +151,7 @@
             this.Controls.Add(this.LblUsuario);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.HelpButton = true;
             this.Name = "Login";
             this.Opacity = 0.9D;

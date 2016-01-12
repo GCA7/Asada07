@@ -25,7 +25,7 @@ namespace Asada2015.GUI
             InitializeComponent();
             this.usu = us;
             this.abo = ab;
-            this.Abo_Load(abo, usu);
+            this.Abo_Load(abo,usu);
         }
 
 
@@ -34,9 +34,18 @@ namespace Asada2015.GUI
             abo = new Abonado();
             abo = ab;
 
-            if (abo.Identification == null)
+            if (radioButton1.Checked == true)
             {
                 MtxtIdentification.Mask = "00-0000-0000";
+                
+            }
+            else
+            {
+                MtxtIdentification.Mask = "00-0000-0000-0000-0000";
+            }
+
+            if (abo.Identification == null)
+            {
                 btnSaveUpdate.Text = "Guardar";
                 MtxtIdentification.Enabled = true;   // txt modo sin edicion
                 MtxtIdentification.ReadOnly = false; // txt modo solo lectura 
@@ -44,19 +53,10 @@ namespace Asada2015.GUI
             }
             else
             {
-                if (abo.Identification.Length == 12)
-                {
-                    MtxtIdentification.Mask = "00-0000-0000";
-                }
-                else
-                {
-                    MtxtIdentification.Mask = "0000-0000-0000-0000-0000";
-                }
-
                 btnSaveUpdate.Text = "Editar";
                 MtxtIdentification.AppendText(abo.Identification.ToString());
-                MtxtIdentification.Enabled = false;
-                MtxtIdentification.ReadOnly = true;
+                MtxtIdentification.Enabled = false; 
+                MtxtIdentification.ReadOnly = true; 
                 TxtName.Text = abo.Name.ToString();
                 TxtFirstN.Text = abo.Firstname.ToString();
                 TxtLastN.Text = abo.Lastname.ToString();
@@ -65,7 +65,7 @@ namespace Asada2015.GUI
                 TxtEmail.Text = abo.Email.ToString();
                 dateTimePicker1.Text = abo.Dateregister.ToString();
                 TxtAddress.Text = abo.Address.ToString();
-            }
+            }            
         }
 
         private void ReseTextBox()
@@ -80,7 +80,15 @@ namespace Asada2015.GUI
             TxtEmail.ResetText();
             TxtAddress.ResetText();
         }
-
+        private string RemoveScript()
+        {
+            char[] number = MtxtIdentification.Text.Trim().ToCharArray();
+            for (int i = 0; i < number.Length ; i++)
+            {
+                
+            }
+            return "";
+        }
         private Abonado GetInfo()
         {
             abo = new Abonado();
@@ -91,22 +99,21 @@ namespace Asada2015.GUI
             abo.Movil = MtxtMovil.Text;
             abo.Phonenum = MtxtPhone.Text;
             abo.Email = TxtEmail.Text;
-            abo.Address = TxtAddress.Text;
+            abo.Address = TxtAddress.Text;            
             abo.Dateregister = dateTimePicker1.Value.ToString("yyyy/MM/dd");
             return abo;
         }
 
         private void btnSerch_Click(object sender, EventArgs e)
         {
-            SerchAbonado serch = new SerchAbonado(usu);
+            SerchAbonado serch = new SerchAbonado(usu);            
             serch.ShowDialog(this);
         }
-
         private void btnSaveUpdate_Click(object sender, EventArgs e)
         {
             btnSaveOption = btnSaveUpdate.Text;
             aboDao = new AbonadoDAO(this.usu);
-            if (MtxtIdentification.Text.Trim() == "" || TxtName.Text.Trim() == "" || TxtFirstN.Text.Trim() == "" || TxtLastN.Text.Trim() == "" || MtxtPhone.Text.Trim() == "" || TxtAddress.Text == "")
+            if (TxtName.Text.Trim() == "" || TxtFirstN.Text.Trim() == "" || TxtLastN.Text.Trim() == "" || MtxtPhone.Text.Trim() == "" || TxtAddress.Text == "")
             {
                 MessageBox.Show(this, "Campos en blanco detectados, verifique!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -116,37 +123,28 @@ namespace Asada2015.GUI
 
                 switch (btnSaveOption)
                 {
-                    case "Guardar":
+                    case "Guardar":                        
                         if (!aboDao.InsertNew((abo = GetInfo())))
                         {
                             MessageBox.Show(this, "El número de identificación ya existe!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         else
                         {
-                            abo = new Abonado();
-                            Abo_Load(abo, usu);
-                            this.ReseTextBox();
                             MessageBox.Show(this, "Usuario agregado correctamente!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.ReseTextBox();
                         }
-
                         break;
 
                     case "Editar":
-                        if (!aboDao.Update((abo = GetInfo())))
-                        {
-                            MessageBox.Show(this, "Error, no se puede actualizar el abonado!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        else
-                        {
-                            this.ReseTextBox();
-                            MessageBox.Show(this, "Datos actualizados correctamente!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+                        aboDao.Update((abo = GetInfo()));
+                        MessageBox.Show(this, "Datos actualizados correctamente!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         abo = new Abonado();
-                        Abo_Load(abo, usu);
+                        this.ReseTextBox();
                         break;
                 }
             }
         }
+
 
         private void btnOut_Click(object sender, EventArgs e)
         {
@@ -162,20 +160,30 @@ namespace Asada2015.GUI
             fpr = (Principal)this.Owner;
             fpr.Pri_Load(usu);
             fpr.Show();
-        }
+        } 
 
-        private void radioButton1_Click(object sender, EventArgs e)
+        private void radioButton1_MouseClick(object sender, MouseEventArgs e)
         {
-            radioButton2.Checked = false;
-            MtxtIdentification.Mask = "00-0000-0000";
-            MtxtIdentification.Text = "";
+            if (MtxtIdentification.MaskCompleted)
+            {
+                return;
+            }
+            else
+            {
+                MtxtIdentification.Mask = "00-0000-0000";
+            } 
         }
 
         private void radioButton2_Click(object sender, EventArgs e)
         {
-            radioButton1.Checked = false;
-            MtxtIdentification.Mask = "0000-0000-0000-0000-0000";
-            MtxtIdentification.Text = "";
+            if (MtxtIdentification.MaskCompleted)
+            {
+                return;
+            }
+            else
+            {
+                MtxtIdentification.Mask = "00-0000-0000-0000-0000";
+            }
         }
 
         private void TxtName_TextChanged(object sender, EventArgs e)
@@ -202,5 +210,72 @@ namespace Asada2015.GUI
         {
             TxtAddress.CharacterCasing = CharacterCasing.Upper;
         }
+
+        private void frmAbonados_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+                
     }
 }
